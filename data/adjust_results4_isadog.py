@@ -90,3 +90,4 @@ def adjust_results4_isadog(results_dic, dogfile):
             value.append(0)  # Classifier image is NOT a dog
 
     print("\nResults Dictionary:\n", results_dic)
+    print("End of adjust_results4_isadog function.")
