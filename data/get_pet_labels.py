@@ -46,8 +46,21 @@ def get_pet_labels(image_dir):
   # Print 10 of the filenames from folder given directory
   print(f"\n Prints 10 filenames from folder {image_dir} ")
 
-  for idx in range(0, 10, 1):
-      print("{:2d} file: {:>25}".format(idx + 1, filename_list[idx]) )
+  number_of_files = len(filename_list)
+
+  # if number_of_files == 0:
+  #   print("There are no files in the folder.")
+  #   return results_dic
+
+  if number_of_files > 10:
+      print("There are more than 10 files in the folder.")
+      for idx in range(number_of_files):
+          print("{:2d} file: {:>10}".format(idx + 1, filename_list[idx]) )
+  else:
+     pass
+    #  print("There are less than 10 files in the folder.")
+    #  for idx in range(number_of_files):
+    #      print("{:2d} file: {}".format(idx + 1, filename_list[idx]) )
 
   filenames = len(filename_list)
   print("\nNumber of files in the folder =", filenames)
@@ -59,29 +72,30 @@ def get_pet_labels(image_dir):
   print("Now adding items to results_dic dictionary with key=filename and value=pet label")
 
   for idx in range(0, filenames, 1):
-      file = filename_list[idx]
-      name_without_ext = os.path.splitext(filename_list[idx])[0]
+    file = filename_list[idx]
+    name_without_ext = os.path.splitext(filename_list[idx])[0]
 
-      if file in results_dic:
-          print("** Warning: Key=", name_without_ext, "already exists in results_dic with value =", results_dic[name_without_ext])
-      else:
-          print("** Adding Key=", name_without_ext, "to results_dic")
-          if name_without_ext.split('_')[-1].isnumeric():
-            pet_label = name_without_ext.split('_')[:-1]
-          else:
-            pet_label = name_without_ext.split('_')
-          word_list = []
-          for word in pet_label:
-              if word.isalpha():
-                  word = word.lower().strip()
-              word_list.append(word)
-          pet_label = ' '.join(word_list)
-          results_dic[file] = [pet_label]
+    if file in results_dic:
+        print("** Warning: Key=", name_without_ext, "already exists in results_dic with value =", results_dic[name_without_ext])
+    else:
+        print("** Adding Key=", name_without_ext, "to results_dic")
+        if name_without_ext.split('_')[-1].isnumeric():
+          pet_label = name_without_ext.split('_')[:-1]
+        else:
+          pet_label = name_without_ext.split('_')
+        word_list = []
+        for word in pet_label:
+            if word.isalpha():
+                word = word.lower().strip()
+            word_list.append(word)
+        pet_label = ' '.join(word_list)
+        results_dic[file] = [pet_label]
 
   # Replace None with the results_dic dictionary that you created with this
     # function
   ## Prints resulting pet_name
-  print("\nFilename=", name_without_ext, "   Label=", pet_label)
+    # print("\nFilename=", name_without_ext, "   Label=", pet_label)  
+  
   print("the total number of items in the dictionary results_dic =", len(results_dic))
 
   return results_dic
