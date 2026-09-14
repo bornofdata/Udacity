@@ -62,7 +62,7 @@ def get_pet_labels(image_dir):
       file = filename_list[idx]
       name_without_ext = os.path.splitext(filename_list[idx])[0]
 
-      if name_without_ext in results_dic:
+      if file in results_dic:
           print("** Warning: Key=", name_without_ext, "already exists in results_dic with value =", results_dic[name_without_ext])
       else:
           print("** Adding Key=", name_without_ext, "to results_dic")
@@ -76,7 +76,7 @@ def get_pet_labels(image_dir):
                   word = word.lower().strip()
               word_list.append(word)
           pet_label = ' '.join(word_list)
-          results_dic[name_without_ext] = [pet_label]
+          results_dic[file] = [pet_label]
 
   # Replace None with the results_dic dictionary that you created with this
     # function

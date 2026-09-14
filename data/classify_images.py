@@ -71,7 +71,7 @@ def classify_images(images_dir, results_dic, model):
     pet_label = results_dic.get(image, [])[0]
 
 
-    full_image_path = images_dir + image + '.jpg'
+    full_image_path = images_dir + image
 
     # get the classifier label from the classifier function
     classifier_label = classifier(full_image_path, model)
