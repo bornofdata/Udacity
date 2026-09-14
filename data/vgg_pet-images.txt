@@ -4,16 +4,47 @@ Command Line Arguments:
  dogfile = dognames.txt
 
  Prints 10 filenames from folder pet_images/ 
- 1 file:                cat_01.jpg
- 2 file:          Poodle_07927.jpg
- 3 file:                cat_02.jpg
- 4 file:      Great_dane_05320.jpg
- 5 file:       Dalmatian_04068.jpg
- 6 file:              gecko_02.jpg
- 7 file:                cat_07.jpg
- 8 file:  Great_pyrenees_05435.jpg
+There are more than 10 files in the folder.
+ 1 file: cat_01.jpg
+ 2 file: Poodle_07927.jpg
+ 3 file: cat_02.jpg
+ 4 file: Great_dane_05320.jpg
+ 5 file: Dalmatian_04068.jpg
+ 6 file: gecko_02.jpg
+ 7 file: cat_07.jpg
+ 8 file: Great_pyrenees_05435.jpg
  9 file: German_shepherd_dog_04931.jpg
 10 file: German_shepherd_dog_04890.jpg
+11 file: Collie_03797.jpg
+12 file: Saint_bernard_08010.jpg
+13 file: Dalmatian_04037.jpg
+14 file: Rabbit_002.jpg
+15 file: polar_bear_04.jpg
+16 file: Poodle_07956.jpg
+17 file: fox_squirrel_01.jpg
+18 file: Beagle_01170.jpg
+19 file: Boston_terrier_02285.jpg
+20 file: skunk_029.jpg
+21 file: Boston_terrier_02303.jpg
+22 file: Miniature_schnauzer_06884.jpg
+23 file: Beagle_01141.jpg
+24 file: Basenji_00974.jpg
+25 file: gecko_80.jpg
+26 file: Dalmatian_04017.jpg
+27 file: Boxer_02426.jpg
+28 file: Basenji_00963.jpg
+29 file: Boston_terrier_02259.jpg
+30 file: Golden_retriever_05182.jpg
+31 file: Golden_retriever_05223.jpg
+32 file: great_horned_owl_02.jpg
+33 file: Saint_bernard_08036.jpg
+34 file: Golden_retriever_05195.jpg
+35 file: Beagle_01125.jpg
+36 file: Great_pyrenees_05367.jpg
+37 file: German_shorthaired_pointer_04986.jpg
+38 file: Cocker_spaniel_03750.jpg
+39 file: Golden_retriever_05257.jpg
+40 file: Basset_hound_01034.jpg
 
 Number of files in the folder = 40
 
@@ -59,8 +90,6 @@ Now adding items to results_dic dictionary with key=filename and value=pet label
 ** Adding Key= Cocker_spaniel_03750 to results_dic
 ** Adding Key= Golden_retriever_05257 to results_dic
 ** Adding Key= Basset_hound_01034 to results_dic
-
-Filename= Basset_hound_01034    Label= basset hound
 the total number of items in the dictionary results_dic = 40
 
 Pet Image Label Dictionary has 40 key-value pairs.
@@ -525,4 +554,4 @@ Incorrectly Classified Breeds:
   Great_pyrenees_05367.jpg: great pyrenees (Pet), kuvasz (Classifier), 1 (Pet Label),  1 (Classifier Label)
 End of print_results function.
 
-** Total Elapsed Runtime: 0:0:22
+** Total Elapsed Runtime: 0:0:20

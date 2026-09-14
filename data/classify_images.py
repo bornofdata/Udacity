@@ -65,6 +65,9 @@ def classify_images(images_dir, results_dic, model):
     Returns:
           None - results_dic is mutable data type so no return needed.         
   """
+  if len(results_dic) == 0:
+    print("The results_dic dictionary is empty. Please provide a valid results_dic.")
+    raise ValueError("The results_dic dictionary is empty. Please provide a valid results_dic.")
 
   for image in results_dic:
     # get the pet label from the results dictionary
