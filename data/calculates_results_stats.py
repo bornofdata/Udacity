@@ -86,8 +86,13 @@ def calculates_results_stats(results_dic):
     results_stats_dic['n_images'] = len(results_dic)
 
     for key, value in results_dic.items():
+
+
+        if value[2] == 1: # meaning the pet image label and classifier label match
+            results_stats_dic['n_match'] = results_stats_dic['n_match'] + 1
+
         # Check if the pet image label is a dog
-        if value[3] == 1:
+        elif value[3] == 1:
             results_stats_dic['n_dogs_img'] = results_stats_dic['n_dogs_img'] + 1
 
             # Check if the classifier label is also a dog i.e pet image is a dog and classifier label is also a dog
@@ -104,9 +109,6 @@ def calculates_results_stats(results_dic):
             # Check if the classifier label is also not a dog
             if value[4] == 0:
                 results_stats_dic['n_correct_notdogs'] = results_stats_dic['n_correct_notdogs'] + 1
-
-        elif value[2] == 1: # meaning the pet image label and classifier label match
-            results_stats_dic['n_match'] = results_stats_dic['n_match'] + 1
 
 #     # Calculate the number of dog images
 #     results_stats_dic['n_dogs_img'] = sum([1 for v in results_dic.values() if v[3] == 1])
