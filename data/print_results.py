@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/print_results.py
 #                                                                             
-# PROGRAMMER: 
-# DATE CREATED:
+# PROGRAMMER: Kehinde Fagbamigbe
+# DATE CREATED: 2026-09-13
 # REVISED DATE: 
 # PURPOSE: Create a function print_results that prints the results statistics
 #          from the results statistics dictionary (results_stats_dic). It 
@@ -61,6 +61,40 @@ def print_results(results_dic, results_stats_dic, model,
                               False doesn't print anything(default) (bool) 
     Returns:
            None - simply printing results.
-    """    
-    None
-                
+    """   
+    print("Start of print_results function.")
+
+    print("Results Summary:")
+    print(f"Model: {model}")
+    print(f"Number of Images: {results_stats_dic['n_images']}")
+    print(f"Number of Dog Images: {results_stats_dic['n_dogs_img']}")
+    print(f"Number of Not-Dog Images: {results_stats_dic['n_notdogs_img']}")
+    print(f"Number of Matches: {results_stats_dic['n_match']}")
+    print(f"Number of Correct Dogs: {results_stats_dic['n_correct_dogs']}")
+    print(f"Number of Correct Not-Dogs: {results_stats_dic['n_correct_notdogs']}")
+    print(f"Number of Correct Breeds: {results_stats_dic['n_correct_breed']}")
+    print(f"Percentage of Matches: {results_stats_dic['pct_match']:.2f}%")
+    print(f"Percentage of Correct Dogs: {results_stats_dic['pct_correct_dogs']:.2f}%")
+    print(f"Percentage of Correct Breeds: {results_stats_dic['pct_correct_breed']:.2f}%")
+    print(f"Percentage of Correct Not-Dogs: {results_stats_dic['pct_correct_notdogs']:.2f}%")
+
+    # Labels are misclassified as dogs when both labels aren't in agreement 
+    # regarding whether or not an image is of a dog.
+    if print_incorrect_dogs:
+        print("Incorrectly Classified Dogs:")
+        #sum(results_dic[key][3:]) == 1
+        for key, value in results_dic.items():
+            if (value[3] == 1 and value[4] == 0) or (value[3] == 0 and value[4] == 1):
+                print(f"  {key}: {value[0]} (Pet), {value[1]} (Classifier), {value[3]} (Pet Label),  {value[4]} (Classifier Label)")
+
+    # Labels have a misclassification of breeds of dog when both labels
+    # indicate that the image is a dog; but, labels aren't in agreement regarding
+    # the dog's breed.
+    if print_incorrect_breed:
+        print("Incorrectly Classified Breeds:")
+       # sum(results_dic[key][3:]) == 2 and results_dic[key][2] == 0
+        for key, value in results_dic.items():
+            if value[3] == 1 and value[4] == 1 and value[2] == 0:
+                print(f"  {key}: {value[0]} (Pet), {value[1]} (Classifier), {value[3]} (Pet Label),  {value[4]} (Classifier Label)")
+
+    print("End of print_results function.")
