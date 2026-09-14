@@ -92,7 +92,7 @@ def calculates_results_stats(results_dic):
             results_stats_dic['n_match'] = results_stats_dic['n_match'] + 1
 
         # Check if the pet image label is a dog
-        elif value[3] == 1:
+        if value[3] == 1:
             results_stats_dic['n_dogs_img'] = results_stats_dic['n_dogs_img'] + 1
 
             # Check if the classifier label is also a dog i.e pet image is a dog and classifier label is also a dog

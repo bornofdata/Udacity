@@ -496,7 +496,7 @@ PetLabelDog: 1  ClassLabelDog: 1
 # Total Images 40 # Matches: 35 # NOT Matches: 5
 End of calculates_results_stats function.
 Results Statistics Dictionary:
- {'n_images': 40, 'n_dogs_img': 30, 'n_notdogs_img': 10, 'n_match': 0, 'n_correct_dogs': 30, 'n_correct_notdogs': 10, 'n_correct_breed': 28, 'pct_correct_dogs': 100.0, 'pct_correct_notdogs': 100.0, 'pct_correct_breed': 93.33333333333333, 'pct_match': 0.0}
+ {'n_images': 40, 'n_dogs_img': 30, 'n_notdogs_img': 10, 'n_match': 35, 'n_correct_dogs': 30, 'n_correct_notdogs': 10, 'n_correct_breed': 28, 'pct_correct_dogs': 100.0, 'pct_correct_notdogs': 100.0, 'pct_correct_breed': 93.33333333333333, 'pct_match': 87.5}
 
  ** Statistics from calculates_results_stats() function:
 N Images: 40  N Dog Images: 30  N NotDog Images: 10 
@@ -511,11 +511,11 @@ Model: vgg
 Number of Images: 40
 Number of Dog Images: 30
 Number of Not-Dog Images: 10
-Number of Matches: 0
+Number of Matches: 35
 Number of Correct Dogs: 30
 Number of Correct Not-Dogs: 10
 Number of Correct Breeds: 28
-Percentage of Matches: 0.00%
+Percentage of Matches: 87.50%
 Percentage of Correct Dogs: 100.00%
 Percentage of Correct Breeds: 93.33%
 Percentage of Correct Not-Dogs: 100.00%
@@ -525,4 +525,4 @@ Incorrectly Classified Breeds:
   Great_pyrenees_05367: great pyrenees (Pet), kuvasz (Classifier), 1 (Pet Label),  1 (Classifier Label)
 End of print_results function.
 
-** Total Elapsed Runtime: 0:0:20
+** Total Elapsed Runtime: 0:0:22

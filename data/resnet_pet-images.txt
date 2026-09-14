@@ -496,7 +496,7 @@ PetLabelDog: 1  ClassLabelDog: 1
 # Total Images 40 # Matches: 33 # NOT Matches: 7
 End of calculates_results_stats function.
 Results Statistics Dictionary:
- {'n_images': 40, 'n_dogs_img': 30, 'n_notdogs_img': 10, 'n_match': 0, 'n_correct_dogs': 30, 'n_correct_notdogs': 9, 'n_correct_breed': 27, 'pct_correct_dogs': 100.0, 'pct_correct_notdogs': 90.0, 'pct_correct_breed': 90.0, 'pct_match': 0.0}
+ {'n_images': 40, 'n_dogs_img': 30, 'n_notdogs_img': 10, 'n_match': 33, 'n_correct_dogs': 30, 'n_correct_notdogs': 9, 'n_correct_breed': 27, 'pct_correct_dogs': 100.0, 'pct_correct_notdogs': 90.0, 'pct_correct_breed': 90.0, 'pct_match': 82.5}
 
  ** Statistics from calculates_results_stats() function:
 N Images: 40  N Dog Images: 30  N NotDog Images: 10 
@@ -511,11 +511,11 @@ Model: resnet
 Number of Images: 40
 Number of Dog Images: 30
 Number of Not-Dog Images: 10
-Number of Matches: 0
+Number of Matches: 33
 Number of Correct Dogs: 30
 Number of Correct Not-Dogs: 9
 Number of Correct Breeds: 27
-Percentage of Matches: 0.00%
+Percentage of Matches: 82.50%
 Percentage of Correct Dogs: 100.00%
 Percentage of Correct Breeds: 90.00%
 Percentage of Correct Not-Dogs: 90.00%
