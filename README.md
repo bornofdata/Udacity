@@ -163,3 +163,24 @@ Each file plays a role in the overall classification and evaluation pipeline.
 This project demonstrates how Python can be used to build a complete evaluation workflow around a pre-trained image classifier. Rather than focusing on model creation, it emphasizes the practical programming tasks required to make AI systems useful: preparing inputs, organizing outputs, validating predictions, calculating statistics, and comparing performance.
 
 By comparing AlexNet, VGG, and ResNet, the project highlights an important real-world lesson in AI development: the best solution is not only about accuracy, but also about efficiency and suitability for the task.
+
+
+
+# SentimentScope: Sentiment Analysis using Transformers!
+
+You are a Machine Learning Engineer at Cinescope, a growing entertainment company working to enhance its recommendation system. Your task is to fine-tune a transformer-based model for sentiment analysis using the IMDB dataset. By classifying reviews as positive or negative, you'll help the company better understand user sentiment and deliver more personalized experiences.
+
+## Getting Started
+
+Instructions for how to get a copy of the project running on your local machine.
+
+### Dependencies
+
+You can find the dependencies in the requirements.txt file.
+
+## Project Instructions
+
+The submission requires you to work on the starter file, complete it and submit in in one of three forms:
+- Submit through the workspace
+- Upload zip file
+- Submit a public GitHub repo.
